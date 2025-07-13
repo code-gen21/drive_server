@@ -103,7 +103,7 @@ const server=http.createServer(async(req,res)=>{
             req.on("data",async (chunk)=>{
                 const data=JSON.parse(chunk.toString());
                 // console.log(data);
-                await rename(`./storage/${data.oldFilename}`,`./storage/${data.newFilename}`)
+                await rename(`./storage/${data.oldFilename}`,`./storage/${data.updatedFileName}`)
                 res.end("File renamed successfully");
             })
         }
