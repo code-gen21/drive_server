@@ -123,7 +123,8 @@ async function serveDirectory(req,res){
     res.end(JSON.stringify(itemsList));  // Here we cannot directly send the itemsList object, we can either put a string or a buffer. Hence we are using JSON.stringify function on it,
 }
 
+const PORT = process.env.PORT || 80;
 
-server.listen(80,"0.0.0.0",()=>{
+server.listen(PORT,"0.0.0.0",()=>{
     console.log("Server started");
 })
